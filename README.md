@@ -4,7 +4,7 @@
 
 If you keep telling a coding agent how to reproduce a regression or review a change, turn that instruction into a skill. A skill tells the agent **when to act, what steps to follow, and what evidence to return**. Unhooked checks the draft and packages it for the agent framework you choose.
 
-[Quickstart](docs/Install-in-Codex.md) · [Example skill](examples/regression-check/SKILL.md) · [Watch the demo](docs/Demo.md) · [Wiki](https://github.com/mikegorelikoff/unhooked-sdk/wiki)
+[Quickstart](docs/Quickstart.md) · [Example skill](examples/regression-check/SKILL.md) · [Watch the demo](docs/Demo.md) · [Wiki](https://github.com/mikegorelikoff/unhooked-sdk/wiki)
 
 ![Unhooked SDK — turn a prompt into an installable skill](docs/assets/social-preview.png)
 
@@ -27,4 +27,4 @@ The SDK exposes the authoring tools through MCP (Model Context Protocol) for com
 
 ## Availability
 
-This public repository contains guides, examples, and demo media under [CC BY 4.0](LICENSE). The SDK implementation and releases require separate access. If you already have access, follow the [prompt-only quickstart](docs/Install-in-Codex.md). Report documentation gaps through [GitHub Issues](https://github.com/mikegorelikoff/unhooked-sdk/issues/new/choose).
+This public repository contains guides, examples, and demo media under [CC BY 4.0](LICENSE). The SDK implementation and releases require separate access. If you already have access, follow the [prompt-only quickstart](docs/Quickstart.md). Report documentation gaps through [GitHub Issues](https://github.com/mikegorelikoff/unhooked-sdk/issues/new/choose).

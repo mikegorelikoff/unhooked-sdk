@@ -20,4 +20,4 @@ Unhooked helps coding teams turn repeatable agent workflows into reusable skill 
 
 A compatible host can discover the local MCP tools. The SDK also has Rust and CLI entry points; the public guides use prompts as the user interface. The [demo](Demo.md) verifies one host setup. It does not claim equivalent activation across all hosts.
 
-[Quickstart](Install-in-Codex.md) · [Sample exported shape](../examples/regression-check/SKILL.md)
+[Quickstart](Quickstart.md) · [Sample exported shape](../examples/regression-check/SKILL.md)

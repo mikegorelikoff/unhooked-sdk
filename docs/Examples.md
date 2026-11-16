@@ -1,6 +1,6 @@
 # Prompts to try
 
-After [setting up the SDK](Install-in-Codex.md), paste one of these into a compatible agent chat.
+After [setting up the SDK](Quickstart.md), paste one of these into a compatible agent chat.
 
 ## Create and package a skill
 
