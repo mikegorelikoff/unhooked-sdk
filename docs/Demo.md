@@ -1,6 +1,6 @@
 # Clean Codex demo
 
-The demo follows two actual fresh Codex CLI sessions: a project setup and a regression investigation in a small shipping example. It shows selected terminal output. The setup was recorded against a release accessible at the time; access to the SDK is now separate from this public guide.
+Codex CLI is one demonstrated host. This edited replay follows two real fresh sessions: a project setup and a regression investigation in a small shipping example. It shows selected terminal output. The setup was recorded against a release accessible at the time; access to the SDK is now separate from this public guide.
 
 1. Paste the [setup prompt](Install-in-Codex.md). Codex installs and checks the project tools.
 2. In a fresh session, describe the shipping regression [without naming a skill](Examples.md#reproduce-a-regression).

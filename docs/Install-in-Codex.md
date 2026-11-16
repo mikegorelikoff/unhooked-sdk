@@ -1,13 +1,13 @@
-# Install in Codex
+# Quickstart: install from your agent chat
 
-Open Codex in a project you control. Have an approved Unhooked SDK source location and release ready. Paste this into chat:
+Use a project you control and a compatible coding agent with permission to read your SDK source and write to that project. Have an approved SDK source location and release ready. Paste:
 
-> Set up Unhooked SDK and its BMAD regression workflow in this project from **[approved SDK location and release]**. Read the installation guide at that release. Keep my existing project instructions, installed workflows and tools. Ask for approval for any protected installation writes. Verify the result and tell me what to check in a new session.
+> Set up Unhooked SDK in this project from **[approved SDK location and release]**. Read that release’s installation guide and configure its MCP tools using this host’s supported setup. Install the BMAD regression workflow if this project uses BMAD and the host supports it. Keep existing instructions, workflows, and tools. Ask before protected writes, verify what you installed, and tell me how to check it in a new session.
 
-Codex uses the release's guide to build the SDK, install the BMAD workflow and configure the project tools. If a prerequisite is missing, ask Codex to tell you which one. Review any approval requests before accepting them.
+Ask the agent to report unsupported configuration or missing prerequisites before changing shared settings. Once the host has reloaded project setup, paste:
 
-Open a new session in the same project and paste:
+> Discover this project’s Unhooked SDK tools. Tell me what each does and whether the regression workflow is installed. Leave the project unchanged.
 
-> Find the Unhooked SDK tools configured for this project. Tell me what each does, verify that the BMAD regression workflow is installed, and leave the project unchanged.
+The SDK exposes four operations: validate a draft, compose reusable components, check target portability, and prepare a package. Setup and automatic skill discovery vary by host. [Codex with BMAD](Demo.md) is a recorded example.
 
-Expect four operations: validate, compose, check target portability, and prepare a package. See [Examples](Examples.md) for what to ask next.
+Next: [try a prompt](Examples.md) or [see what the SDK produces](How-it-works.md).

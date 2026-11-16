@@ -1,20 +1,30 @@
 # Unhooked SDK
 
-**Build skills for coding agents by talking to Codex.** Describe the skill you want. Codex turns that request into a draft, checks it, and prepares a package for Agent Skills, BMAD, OpenSpec, or Spec Kit.
+**Turn a workflow prompt into an installable skill for AI agents.**
 
-![Four steps: compose a draft, validate it, export the chosen target, and verify it in Codex](docs/assets/workflow.svg)
+If you keep telling a coding agent how to reproduce a regression or review a change, turn that instruction into a skill. A skill tells the agent **when to act, what steps to follow, and what evidence to return**. Unhooked checks the draft and packages it for the agent framework you choose.
 
-## Start with a prompt
+[Quickstart](docs/Install-in-Codex.md) · [Example skill](examples/regression-check/SKILL.md) · [Watch the demo](docs/Demo.md) · [Wiki](https://github.com/mikegorelikoff/unhooked-sdk/wiki)
 
-Open a Codex session in a project you control. If your team has given you access to an SDK release, paste:
+![Unhooked SDK — turn a prompt into an installable skill](docs/assets/social-preview.png)
 
-> Set up Unhooked SDK and its BMAD regression workflow in this project. Use the SDK checkout or release I have access to. Follow its installation guide, keep my existing project settings, and verify that the workflow and tools are available in a new Codex session. Ask for approval if a project installation write needs it.
+## What goes in and what comes out
 
-Give Codex the approved source location if it cannot find one. The setup and the examples below are all driven through the chat. This public repository contains the guides and demo; SDK source access is separate.
+> Create a skill that investigates functional regressions. Have it write or run one focused test, compare expected and actual behavior, and report the evidence. Prepare an Agent Skills package.
 
-- [Install in Codex](docs/Install-in-Codex.md)
-- [How it works](docs/How-it-works.md)
-- [Prompts to try](docs/Examples.md)
-- [Clean Codex demo](docs/Demo.md)
+**The output:** a skill draft, a validation report, and a package containing the instructions and their reference files. Browse the [sample skill](examples/regression-check/SKILL.md) and the [evidence checklist](examples/regression-check/references/evidence.md) to see what an output can look like.
 
-[![Preview the Codex demo: the regression skill opens its evidence card and runs one focused test](docs/assets/codex-regression.png)](docs/Demo.md)
+Unhooked prepares packages for **Agent Skills, BMAD, OpenSpec, and Spec Kit**. Package preparation and live execution are separate. After installation, the agent host decides how it finds and runs the skill.
+
+## Work from your agent chat
+
+1. **Describe** the workflow and the evidence you want back.
+2. **Check** the draft and fix missing or unsupported behavior.
+3. **Package** it for the framework you use.
+4. **Install and verify** it in a project you control.
+
+The SDK exposes the authoring tools through MCP (Model Context Protocol) for compatible agent hosts. The [recorded Codex demo](docs/Demo.md) shows one verified BMAD setup and a separate regression run. See [How it works](docs/How-it-works.md) for the output formats and what was verified.
+
+## Availability
+
+This public repository contains guides, examples, and demo media under [CC BY 4.0](LICENSE). The SDK implementation and releases require separate access. If you already have access, follow the [prompt-only quickstart](docs/Install-in-Codex.md). Report documentation gaps through [GitHub Issues](https://github.com/mikegorelikoff/unhooked-sdk/issues/new/choose).
