@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 348" role="img" aria-labelledby="title desc">
+  <title id="title">From intent to an installed skill</title>
+  <desc id="desc">Compose a draft, validate its contract, export a package, and verify the installed skill in Codex.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop stop-color="#111833"/><stop offset="1" stop-color="#091121"/>
+    </linearGradient>
+    <linearGradient id="accent"><stop stop-color="#9EF7CB"/><stop offset="1" stop-color="#9DB6FF"/></linearGradient>
+  </defs>
+  <rect x="1" y="1" width="1198" height="346" rx="24" fill="url(#bg)" stroke="#273652"/>
+  <g font-family="system-ui,sans-serif">
+    <text x="49" y="54" fill="#A2F3D1" font-size="15" font-weight="700" letter-spacing="4">UNHOOKED SDK</text>
+    <text x="48" y="107" fill="#F2F6FF" font-size="44" font-weight="750">From intent to an installed skill</text>
+    <text x="49" y="142" fill="#AEC0DC" font-size="19">One draft. Four output targets. Verify the result in the host.</text>
+    <g fill="#18253D" stroke="#39496B">
+      <rect x="48" y="181" width="254" height="123" rx="12"/>
+      <rect x="332" y="181" width="254" height="123" rx="12"/>
+      <rect x="616" y="181" width="254" height="123" rx="12"/>
+      <rect x="900" y="181" width="252" height="123" rx="12"/>
+    </g>
+    <path d="M308 243h14m-5-5 5 5-5 5m275-5h14m-5-5 5 5-5 5m275-5h14m-5-5 5 5-5 5" fill="none" stroke="url(#accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <g fill="url(#accent)" font-size="16" font-weight="700">
+      <text x="68" y="209">01 / DRAFT</text><text x="352" y="209">02 / CHECK</text>
+      <text x="636" y="209">03 / PACKAGE</text><text x="920" y="209">04 / INSTALL</text>
+    </g>
+    <g fill="#F2F6FF" font-size="23" font-weight="700">
+      <text x="68" y="248">Compose</text><text x="352" y="248">Validate</text>
+      <text x="636" y="248">Export</text><text x="920" y="248">Verify in Codex</text>
+    </g>
+    <g fill="#AEC0DC" font-size="16">
+      <text x="68" y="278">Intent + reusable steps</text><text x="352" y="278">Rules + references</text>
+      <text x="636" y="278">Agent Skills · BMAD · others</text><text x="920" y="278">Project rule + MCP tools</text>
+    </g>
+  </g>
+</svg>
