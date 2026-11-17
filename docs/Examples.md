@@ -6,7 +6,19 @@ After [setting up the SDK](Quickstart.md), paste one of these into a compatible 
 
 > Create a skill for functional regressions. Have it find one focused test, compare expected and observed behavior, and report the relevant source and test evidence. Validate the draft and prepare a BMAD package in a new folder. Tell me what ran and what still needs live verification.
 
-Expect a draft, validation results, and a package location. The [example skill](../examples/regression-check/SKILL.md) shows what instructions and a supporting reference can look like.
+Expect a draft, validation results, and a package location. The [regression example](../examples/regression-check/SKILL.md) shows supporting references. The [checkout example](../examples/checkout-threshold-audit/SKILL.md) shows separate steps and a generated script.
+
+## Run the exported checkout helper
+
+Open [SKILL.md](../examples/checkout-threshold-audit/SKILL.md). It links directly to the first file in `steps/`. Each step links to the next one. The [HX configuration](../examples/checkout-threshold-audit/customize.toon) maps stable step IDs to the same files.
+
+From this repository, run the exported helper for a reported charge of 499 cents and an expected charge of 0 cents.
+
+```sh
+python3 examples/checkout-threshold-audit/scripts/check-shipping.py 499 0
+```
+
+It prints the mismatch and exits 1. Passing `0 0` returns 0. Passing `invalid 0` returns 2. This helper compares supplied amounts. The checkout example was also exercised through HX activation, start, and step advancement.
 
 ## Verify that the workflow is picked up
 

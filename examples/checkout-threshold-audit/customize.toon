@@ -1,0 +1,7 @@
+schema: unhooked/customize@1
+workflow:
+  # Steps in SDK composition order.
+  steps[3]{id,file,enabled}:
+    scope-request,steps/step-01.md,true
+    check-shipping-charge,steps/step-02.md,true
+    report-evidence,steps/step-03.md,true

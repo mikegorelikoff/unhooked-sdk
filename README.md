@@ -4,7 +4,7 @@
 
 If you keep telling a coding agent how to reproduce a regression or review a change, turn that instruction into a skill. A skill tells the agent **when to act, what steps to follow, and what evidence to return**. Unhooked checks the draft and packages it for the agent framework you choose.
 
-[Quickstart](docs/Quickstart.md) · [Example skill](examples/regression-check/SKILL.md) · [Watch the demo](docs/Demo.md) · [Wiki](https://github.com/mikegorelikoff/unhooked-sdk/wiki)
+[Quickstart](docs/Quickstart.md) · [Runnable checkout skill](examples/checkout-threshold-audit/SKILL.md) · [Watch the demo](docs/Demo.md) · [Wiki](https://github.com/mikegorelikoff/unhooked-sdk/wiki)
 
 ![Unhooked SDK — turn a prompt into an installable skill](docs/assets/social-preview.png)
 
@@ -12,7 +12,7 @@ If you keep telling a coding agent how to reproduce a regression or review a cha
 
 > Create a skill that investigates functional regressions. Have it write or run one focused test, compare expected and actual behavior, and report the evidence. Prepare an Agent Skills package.
 
-**The output:** a skill draft, a validation report, and a package containing the instructions and their reference files. Browse the [sample skill](examples/regression-check/SKILL.md) and the [evidence checklist](examples/regression-check/references/evidence.md) to see what an output can look like.
+**The output:** a skill draft, a validation report, and a package containing `SKILL.md`, numbered files under `steps/`, and any authored helpers under `scripts/`. The [checkout example](examples/checkout-threshold-audit/SKILL.md) opens step 1 directly. Its [HX configuration](examples/checkout-threshold-audit/customize.toon) maps the same step order for the HX runner.
 
 Unhooked prepares packages for **Agent Skills, BMAD, OpenSpec, and Spec Kit**. Package preparation and live execution are separate. After installation, the agent host decides how it finds and runs the skill.
 
