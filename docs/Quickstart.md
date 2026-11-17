@@ -1,13 +1,15 @@
-# Quickstart: install from your agent chat
+# Quickstart
 
-Use a project you control and a compatible coding agent with permission to read your SDK source and write to that project. Have an approved SDK source location and release ready. Paste:
+Use a project you control, an MCP-capable agent and an approved SDK source or release. The SDK exposes its authoring operations through a local MCP server. Installation paths and skill discovery depend on the host.
 
-> Set up Unhooked SDK in this project from **[approved SDK location and release]**. Read that release’s installation guide and configure its MCP tools using this host’s supported setup. Install the BMAD regression workflow if this project uses BMAD and the host supports it. Keep existing instructions, workflows, and tools. Ask before protected writes, verify what you installed, and tell me how to check it in a new session.
+## Install from a prompt
 
-Ask the agent to report unsupported configuration or missing prerequisites before changing shared settings. Once the host has reloaded project setup, paste:
+> Install Unhooked SDK from **[approved source and revision]** in this project. Follow that revision’s installation guide. Configure the local MCP server and install the complete authoring skill using this host’s conventions. Preserve the project’s existing tools and skills. Report the installed revision, tool discovery and any step that needs the host to reload.
 
-> Discover this project’s Unhooked SDK tools. Tell me what each does and whether the regression workflow is installed. Leave the project unchanged.
+Start a fresh session or reload the project setup if the host requires it. Ask the agent to discover the SDK tools and read the authoring skill. A configured fresh-host adapter is needed for live verification. [Verification](Verification.md)
 
-The SDK exposes four operations: validate a draft, compose reusable components, check target portability, and prepare a package. Setup and automatic skill discovery vary by host. [Codex with BMAD](Demo.md) is a recorded example.
+## Author your first skill
 
-Next: [try a prompt](Examples.md) or [see what the SDK produces](How-it-works.md).
+> Build a checkout audit skill for reports of an unexpected shipping charge. Use separate scope, comparison and reporting steps. Write a Python helper to compare observed and expected amounts in cents. Export an Agent Skills package and return the validation result, package tree and SHA-256 digests. If a checkout case is configured, return the verification receipt too.
+
+Ask the agent to save the composed draft. You can export that same draft again and compare the file digests. See [the checkout example](Examples.md) for the expected structure and script output.

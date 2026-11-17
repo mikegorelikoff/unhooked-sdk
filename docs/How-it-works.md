@@ -1,23 +1,23 @@
-# How Unhooked works
+# How it works
 
-Unhooked helps coding teams turn repeatable agent workflows into reusable skill packages. A skill has instructions, conditions for when to use them, and optional reference files. The agent using the SDK works from your prompt and calls the SDK to compose, check, and package the draft.
+The agent authors the skill from the prompt. The SDK composes and checks the draft, then writes the files for the selected target. The agent host reads the package and runs the steps.
 
-![Four stages: compose a draft, validate it, export for a target, verify in the agent host](assets/workflow.svg)
+![Prompt, compose, package, verify](assets/authoring-flow-light.svg)
 
 | Stage | What you get |
 | --- | --- |
-| Describe | A draft with when-to-use rules, ordered steps, and evidence requirements. |
-| Compose and check | Reused instructions in dependency order, plus diagnostics for missing inputs or unsupported behavior. |
-| Package | Target-specific files and a report on what the target preserves. |
-| Verify | A live check in the selected host. Package preparation alone does not prove installation or activation. |
+| Describe | Activation conditions, step inputs and outputs, and what counts as done. |
+| Compose and validate | Components assembled in dependency order and diagnostics for structural problems. |
+| Package | Target-specific files and SHA-256 digests for their exact bytes. |
+| Verify | Evidence from the configured test case in a fresh host session. |
 
-| Target | Output |
+## Export profiles
+
+| Target | Package |
 | --- | --- |
-| Agent Skills | A skill directory with `SKILL.md`, numbered step files, optional authored scripts and references. The checkout example includes an HX step mapping in `customize.toon`. |
-| BMAD | A custom module and help entry. The demo adds a project rule for Codex to open the workflow on a regression report. |
+| Agent Skills | A standard directory with `SKILL.md`, numbered step files and any declared scripts or resources. |
+| BMAD | A custom module with a help entry. Installed skill files carry the same step layout. |
 | OpenSpec | A companion skill used with an explicit change ID. |
-| Spec Kit | An opt-in extension with an explicitly invoked command. |
+| Spec Kit | An extension with an explicitly invoked command. Script-free steps are inlined. The profile rejects authored workflow scripts. |
 
-A compatible host can discover the local MCP tools. The SDK also has Rust and CLI entry points; the public guides use prompts as the user interface. The [demo](Demo.md) verifies one host setup. It does not claim equivalent activation across all hosts.
-
-[Quickstart](Quickstart.md) · [Sample exported shape](../examples/checkout-threshold-audit/SKILL.md)
+The [checkout example](../examples/checkout-threshold-audit/SKILL.md) includes the HX step mapping. The [verification guide](Verification.md) explains which parts of a run are independently observed.

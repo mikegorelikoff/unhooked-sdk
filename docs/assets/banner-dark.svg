@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 320" role="img" aria-label="unhooked-sdk: build agent skills from a prompt">
+<title>unhooked-sdk: build agent skills from a prompt</title>
+<defs><marker id="ah" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 1L6 4L1 7" fill="none" stroke="#A1A1AA" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="ahA" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 1L6 4L1 7" fill="none" stroke="#F97316" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect width="1280" height="320" fill="#0B0B0C"/>
+<g transform="translate(96 80) scale(2)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"><path d="M16 14V36a16 16 0 0 0 32 0V24" stroke="#FAFAF9"/><path d="M48 24V8M41 15L48 8L55 15" stroke="#F97316"/></g>
+<text x="256" y="176" font-family='ui-sans-serif, -apple-system, "Inter", "Segoe UI", sans-serif' font-size="80" font-weight="600" fill="#FAFAF9" text-anchor="start">unhooked-sdk</text>
+
+<text x="260" y="224" font-family='ui-sans-serif, -apple-system, "Inter", "Segoe UI", sans-serif' font-size="20" font-weight="400" fill="#A1A1AA" text-anchor="start">Compose, package, and verify agent skills.</text>
+</svg>

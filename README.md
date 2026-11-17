@@ -1,30 +1,75 @@
-# Unhooked SDK
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/assets/banner-dark.svg">
+    <img src="docs/assets/banner-light.svg" alt="Unhooked SDK" width="100%">
+  </picture>
+</p>
 
-**Turn a workflow prompt into an installable skill for AI agents.**
+<p align="center">
+  <a href="docs/Guide.md"><img alt="Guide" src="https://img.shields.io/badge/docs-guide-F97316"></a>
+  <a href="https://github.com/mikegorelikoff/unhooked-sdk/wiki"><img alt="Wiki" src="https://img.shields.io/badge/docs-wiki-52525B"></a>
+  <a href="LICENSE"><img alt="Documentation license CC BY 4.0" src="https://img.shields.io/badge/docs%20license-CC%20BY%204.0-blue"></a>
+</p>
 
-If you keep telling a coding agent how to reproduce a regression or review a change, turn that instruction into a skill. A skill tells the agent **when to act, what steps to follow, and what evidence to return**. Unhooked checks the draft and packages it for the agent framework you choose.
+**Build installable AI agent skills from a prompt. A package can include numbered steps, reusable instructions, scripts, and evidence from a test in a fresh agent session.**
 
-[Quickstart](docs/Quickstart.md) · [Runnable checkout skill](examples/checkout-threshold-audit/SKILL.md) · [Watch the demo](docs/Demo.md) · [Wiki](https://github.com/mikegorelikoff/unhooked-sdk/wiki)
+## Why
 
-![Unhooked SDK — turn a prompt into an installable skill](docs/assets/social-preview.png)
+When a team keeps explaining the same task to agents, it can capture that task once as a skill. The agent authors the instructions and helpers. The SDK orders the components, checks what each step needs and produces an installable package with SHA-256 digests.
 
-## What goes in and what comes out
+## Quickstart
 
-> Create a skill that investigates functional regressions. Have it write or run one focused test, compare expected and actual behavior, and report the evidence. Prepare an Agent Skills package.
+Give an MCP-capable agent your approved SDK source or release and paste this prompt in the project where you want to use the skill. [Full setup guide](docs/Quickstart.md)
 
-**The output:** a skill draft, a validation report, and a package containing `SKILL.md`, numbered files under `steps/`, and any authored helpers under `scripts/`. The [checkout example](examples/checkout-threshold-audit/SKILL.md) opens step 1 directly. Its [HX configuration](examples/checkout-threshold-audit/customize.toon) maps the same step order for the HX runner.
+> Set up Unhooked SDK from my approved source or release. Discover its MCP tools, then create a skill to audit checkout shipping. Reuse the scope and evidence steps. Add a step and a Python helper that compare observed and expected shipping in cents. Export the Agent Skills package and return the step files, script, and file digests. If a fresh-host checkout case is configured, run it and return the verification receipt.
 
-Unhooked prepares packages for **Agent Skills, BMAD, OpenSpec, and Spec Kit**. Package preparation and live execution are separate. After installation, the agent host decides how it finds and runs the skill.
+The [checkout example](examples/checkout-threshold-audit/SKILL.md) is a six-file package:
 
-## Work from your agent chat
+```text
+checkout-threshold-audit/
+├── SKILL.md
+├── customize.toon
+├── steps/
+│   ├── step-01.md
+│   ├── step-02.md
+│   └── step-03.md
+└── scripts/
+    └── check-shipping.py
+```
 
-1. **Describe** the workflow and the evidence you want back.
-2. **Check** the draft and fix missing or unsupported behavior.
-3. **Package** it for the framework you use.
-4. **Install and verify** it in a project you control.
+`SKILL.md` opens step 1 directly. `customize.toon` gives HX the same order. Step 2 runs the Python helper, which reports 499 cents observed versus 0 expected and exits with code 1. [Run the example](docs/Examples.md#run-the-exported-checkout-helper)
 
-The SDK exposes the authoring tools through MCP (Model Context Protocol) for compatible agent hosts. The [recorded Codex demo](docs/Demo.md) shows one verified BMAD setup and a separate regression run. See [How it works](docs/How-it-works.md) for the output formats and what was verified.
+## How it works
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/assets/authoring-flow-dark.svg">
+    <img src="docs/assets/authoring-flow-light.svg" alt="Prompt, compose, package, verify" width="100%">
+  </picture>
+</p>
+
+| Capability | What you get |
+| --- | --- |
+| Compose | Reusable components ordered by their dependencies. |
+| Validate | Diagnostics for missing step contracts, broken references and conflicting files. |
+| Export | Agent Skills, BMAD, OpenSpec or Spec Kit output. See the [profile matrix](docs/How-it-works.md#export-profiles) for differences. |
+| Verify | A receipt for a configured fresh-host case. It records the package hashes, session and observed test result. |
+| Compare | A check that two independent passing receipts agree on the package and test outcomes. |
+
+## Documentation
+
+| Guide | Learn how to |
+| --- | --- |
+| [Quickstart](docs/Quickstart.md) | Set up the SDK and create a skill from a prompt. |
+| [How it works](docs/How-it-works.md) | Understand composition, packaging and export profiles. |
+| [Skills and steps](docs/Skills.md) | Read an exported package and follow the HX step order. |
+| [Verification](docs/Verification.md) | Read a test receipt and compare independent runs. |
+| [Examples](docs/Examples.md) | Try prompts and run the checkout script. |
+| [Recorded demo](docs/Demo.md) | Watch the earlier BMAD setup and regression run. |
+| [FAQ](docs/FAQ.md) | Find answers about access, scripts and reproducibility. |
+
+[Guide index](docs/Guide.md) · [GitHub Wiki](https://github.com/mikegorelikoff/unhooked-sdk/wiki)
 
 ## Availability
 
-This public repository contains guides, examples, and demo media under [CC BY 4.0](LICENSE). The SDK implementation and releases require separate access. If you already have access, follow the [prompt-only quickstart](docs/Quickstart.md). Report documentation gaps through [GitHub Issues](https://github.com/mikegorelikoff/unhooked-sdk/issues/new/choose).
+This public repository contains guides, examples and demo media under [CC BY 4.0](LICENSE). SDK source and releases require separate access. [Report a documentation issue](https://github.com/mikegorelikoff/unhooked-sdk/issues/new/choose)
